@@ -24,9 +24,9 @@
 \usepackage{pgfpages}
 \usetheme{AGH}
 
-%\setbeameroption{hide notes} % Only slides
+\setbeameroption{hide notes} % Only slides
 %\setbeameroption{show only notes} % Only notes
-\setbeameroption{show notes on second screen=right} % Both
+%\setbeameroption{show notes on second screen=right} % Both
 
 
 % Give a slight yellow tint to the notes page
@@ -51,7 +51,33 @@
 \begin{frame}
 \frametitle{\secname}
 
-Wkleić zdjęcia oraz tekst
+\begin{textblock*}{6.5cm}(1cm,2.5cm) % {block width} (coords)
+\begin{itemize}
+	\item Unikanie konfliktów z ,,większym'' lub ,,silniejszym'' osobnikiem.
+	\item Chęć grupowania.
+	\item Hierarchia społeczna.	
+\end{itemize}
+\end{textblock*}
+
+\begin{textblock*}{5cm}(7.7cm,1.8cm) % {block width} (coords)
+	\includegraphics[page=3,width=5cm]{img/Rysunki.pdf}
+	\tiny{Źródło: East News/Glow Images}
+\end{textblock*}
+
+\begin{textblock*}{6cm}(1.5cm,5.5cm) % {block width} (coords)
+	\includegraphics[page=4,width=6cm]{img/Rysunki.pdf}
+	\tiny{Źródło: www.itprotoday.com}
+\end{textblock*}
+
+\begin{textblock*}{5cm}(7.7cm,5cm) % {block width} (coords)
+	\includegraphics[page=5,width=5cm]{img/Rysunki.pdf}
+\end{textblock*}
+
+\note{Zarówno wśród zwierząt jak i ludzi obserwuje się podświadome unikanie konfliktów z ,,większymi'' lub ,,silniejszymi'' osobnikami. Osobniki czujące się pewniej zakładają, iż ,,mniejsi'' ustąpią im miejsca.
+	
+W środowisku zwierząt, obserwuje się podświadomą chęć grupowania osobników w ławice, watahy czy hordy. W większych skupiskach zwierzęta zwiększają swoje szanse na przetrwanie, w początkowym okresie swojego życia. Inny powód łączenia się w grupy, to pozyskiwanie pożywienia. Polowanie w grupie przynosi wymierne korzyści, każdemu z osobników z osobna.
+	
+Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikająca z pierwotnych instynktów, ale również przekazywania zdobytej wiedzy następnym pokoleniom. Hierarchia społeczna odnoszona jest zwykle do społeczności ludzkiej, w której niektóre z osobników znajdują się wyżej w stosunku do innych. Taki podział może mieć różne podłoża, w zależności od grupy. Najbardziej naturalny dla ludzi wynika, z wieku osobników czy ich płci. Młodsze osobniki darzą należnym im, szacunkiem osobniki starsze. Organizacja grupy społecznej widoczna jest najlepiej, w relacjach zawodowych. Osoby zajmujące wysokie stanowiska kierowniczych, obdarzane są przez osoby na niższych stanowiskach respektem. Respekt nie wynika tylko z pozycji, jaką zajmuje dany osobnik w hierarchii. Zjawisko to jest znacznie bardziej szerokie i właśnie ono, dzięki temu zainspirowało autorów do stworzenia algorytmu koordynacji ruchu robotów mobilnych.}
 
 \end{frame}
 
@@ -374,21 +400,140 @@ Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
 \end{frame}
 
 
+\section{Przypadki testowe}
+\begin{frame}
+\frametitle{\secname}
+
+\begin{itemize}
+	\item Otwarta przestrzeń.
+	\item Przejście przez drzwi.	
+	\item Wąski korytarz.
+	\item Skrzyżowanie równorzędne.
+	\item Skrzyżowanie typu 8.
+	\item Mijanka.	
+\end{itemize}
+
+\begin{textblock*}{8cm}(6.6cm,1.85cm) % {block width} (coords)
+	
+	\includegraphics[page=5,width=3cm]{img/experimental_results.pdf}
+	\includegraphics[page=18,width=3cm]{img/experimental_results.pdf}
+	
+	\includegraphics[page=6,width=3cm]{img/experimental_results.pdf}	
+	\includegraphics[page=8,width=3cm]{img/experimental_results.pdf}
+	
+	\includegraphics[page=9,width=3cm]{img/experimental_results.pdf}
+	\includegraphics[page=10,width=3cm]{img/experimental_results.pdf}
+	
+\end{textblock*}
+
+\begin{textblock*}{5cm}(1.2cm,7.8cm) % {block width} (coords)
+	\includegraphics[page=11,width=5cm]{img/experimental_results.pdf}	
+\end{textblock*}
+
+\note{
+
+Ustawienie prostopadłe: 
+1-1 do 10-10 robotów
+
+Skos:
+4 roboty 
+Zadanie 1 polegało na przejechaniu po skosie do punktu leżącego po przekątnej
+Zadanie 2 polegało na przejechaniu po skosie do punktu leżącego po przekątnej oraz powrót do punktu startu
+
+Przejście przez drzwi:
+1-H1 do 10-H10
+Oraz 
+H1-1 do H1-1
+H – w którym pomieszczeniu roboty miały wyższy bazowy współczynnik respektu.
+
+Wąski korytarz:
+1-1 do 10-10
+
+Skrzyżowania:
+Dwa roboty
+
+Dwa roboty
+Cztery roboty
+
+Mijanka:
+1-H1
+H1-1}
+
+\end{frame}
+
+\section{Wnioski i kierunki rozwoju}
+\begin{frame}
+\frametitle{\secname}
+
+\begin{itemize}
+	\item Lepsza wydajność przemieszczania się robotów w drzwiach.
+	
+	\item Algorytm oparty o zasady społeczne sprawdza się znacznie lepiej w skomplikowanych przestrzeniach niż metoda Reciprocal Velocity Obstacles.
+	
+	\item Zdefiniowanie stanów wychodzenie lub wchodzenia w zależności do obserwowanych czynników: np. powierzchnia pomieszczenia, liczba drzwi, gęstość robotów.
+	
+	\item Rozpowszechnienie informacji o bazowym współczynniku respektu -- wykorzystanie obserwowanej chwilowej prędkości robotów.
+	
+	\item Wyznaczenie pierwszeństwa poruszanie w oparciu o zasady obowiązujące w ruchu żeglugowym.
+\end{itemize}
+
+
+\note{Prezentowane wyniki pokazują, iż poprzez wprowadzając zasady pierwszeństwa, w drzwiach wydajność przemieszczenia się robotów poprawiła się. Oparty o zasady społeczne algorytm koordynacji sprawdza, się w skomplikowanych przestrzeniach znacznie lepiej, niż metoda referencyjna \emph{Reciprocal Velocity Obstacles}. 
+	
+Dalsze pracę nad algorytmem koncentrować się będą, na zdefiniowaniu stanu wychodzenia lub wchodzenia w zależności od obserwowalnych czynników, np. powierzchni pomieszczeń, liczby ich drzwi, lub gęstości robotów znajdujących się w pomieszczeniu. 
+	
+Wadą obecnej implementacji jest, z pewnością rozpowszechnianie informacji o bazowym współczynniku respektu każdego z robotów, który jest niezbędny do wyznaczania pierwszeństwa w sytuacjach "jeden na jeden". Rozwiązaniem tego problemu, może być wykorzystanie obserwowanej prędkości chwilowej każdego z robotów. 
+}
+
+\end{frame}
 
 
 
+\section*{Wnioski i kierunki rozwoju}
+\begin{frame}
+\frametitle{\secname}
+
+\begin{itemize}
+	\item Zestaw prostych reaktywnych reguł jest dość dobrą metodą koordynacji ruch robotów w zatłoczonych środowiskach charakteryzującą się dużą dynamikę ruchu.
+	
+	\item Ilość potrzebnej do bezpiecznego wyminięcia się przestrzeni determinuje również zastosowana metoda koordynacji.
+\end{itemize}
+
+\note{Bazując na pozyskiwanych z otoczenia informacji możliwe jest stworzenie zdecentralizowanego algorytmu koordynującego ruch poszczególnych niezależnych jednostek mobilnych. W oparciu o dostarczone ze środowiska dane, algorytm jest wstanie reagować na dynamicznie zmieniającą się sytuację w jego najbliższym sąsiedztwie. Bazując wyłącznie na obserwacji środowiska, roboty są w stanie, bez konieczności wymiany komunikatów, koordynować swój ruch starając się przy tym stale podążać do celu.
+	
+Testy potwierdziły również skuteczności działania mechanizmu rozwiązywania sytuacji konfliktowych (wzajemnych zakleszczeń).
+
+Brak centralnego punktu sterownia oraz zdecentralizowane podejmowanie decyzji czynią tak stworzony system wielorobotowy odpornym na awarię. 
+	
+Testy w \textit{otwartej przestrzeni} wykazały, iż droga jaką muszą pokonać roboty znacznie różni się w zależności od cech, które posiadają poszczególne algorytmy. Roboty w metodzie \textit{PR} muszą ''nadkładać'' drogi, aby ustąpić pierwszeństwa zaś w~metodach bazujących na respekcie, (\textit{R} oraz \textit{R+}), roboty poruszają się mniej skomplikowanymi drogami.
+}
+
+\end{frame}
 
 
 
+\section*{Wnioski i kierunki rozwoju}
+\begin{frame}
+\frametitle{\secname}
+
+\begin{itemize}
+	\item Wymuszenie ustępowania pierwszeństwa w wąskich traktach komunikacyjnych zwiększa jego przepustowość.
+	\item Uzależnienie stanu wychodzenie lub wchodzenia od obserwowanej sytuacji: np. powierzchnia pomieszczenia, liczba drzwi, gęstość robotów.
+	
+\end{itemize}
+
+\note{Niekorzystny wpływ bazowego współczynnikiem respektu na pokonywaną drogę przez roboty.
+	
+	
+Przeprowadzone eksperymenty uwydatniły również niedoskonałości metody behawioralnej związanej z \textit{bazowym współczynnikiem respektu}. W eksperymencie \textit{otwarta przestrzeń skos} robot z powodu niskiego \textit{bazowego współczynnika respektu} musi ''nadkładać'' drogi w celu ominięcia robota o wyższym \textit{współczynniku respektu} (rozdział \ref{Wyniki_Otwarta_przestrzen_skos}). 
+	
+	
+W środowiskach bardziej skomplikowanych, jak  \textit{przejście przez drzwi}, lepiej radzą sobie metody, które wymuszają przepustowość traktu komunikacyjnego, nawet kosztem zatrzymania lub zmiany kierunku innych jednostek (rozdziały \ref{Wyniki_Przejscie_przez_drzwi} i \ref{Robot Przejście przez drzwi}). Podnosząc priorytet robotom, które wychodzą z pomieszczenia udrażniamy przejście i tym samym zwiększamy jego przepustowość.}
+
+\end{frame}
 
 
-
-
-
-
-
-
-
+%Problem wzajemnego „przepychania się” robotów w wąskich przejściach. 
 
 
 
