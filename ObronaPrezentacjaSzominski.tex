@@ -139,18 +139,7 @@ Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikaj�
 
 \end{frame}	
 
-
-%\subsection{)}
-%\begin{frame}
-%\frametitle{\subsecname}
-%
-%Pseudo-kod implementacja algorytmu Respect (R) 
-%
-%\end{frame}
-
-
-
-\subsection{Pseudo-kod implementacja algorytmu Respect (R)}
+\subsection*{Pseudo-kod implementacja algorytmu Respect (R)}
 \begin{frame}
 \frametitle{\subsecname}
 \scriptsize{		
@@ -183,7 +172,7 @@ Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikaj�
 \note{Algorytm \textit{R} pobiera lokalizacje uczestników ruchu (linia: 4), wyznacza swój \textit{współczynnik respektu} zgodnie ze wzorem \ref{eq:fearFactor} (linia: 5). W kolejnym etapie metoda sprawdza czy trajektoria robota koliduje z trajektoriami pozostałych uczestników ruchu, czy też nie (linie: 6-7). Jeżeli trasa pokrywa się z trasą innego robota, w celu wyznaczenia pierwszeństwa dokonywane jest porównanie obliczonych \textit{współczynników respektu}. Gdy \textit{współczynnik respektu} jest mniejszy  niż \textit{współczynnik respektu} robota kolidującego, robot zmuszony jest do ustąpienia mu pierwszeństwa i wyznaczenia nowej trasy (linia: 12). Jeżeli trajektoria robota nie koliduje z robotem o większym \textit{współczynniku respektu}, robot wyznacza najkrótsza trasę do celu wykorzystując algorytm \cite{TurekCetnarowiczZaborowski2011} (linia: 14). Do wyznaczenia nowej bezkolizyjnej ścieżki w~algorytmie \textit{R} brane są pod uwagę wyłącznie te roboty, których obliczone \textit{współczynniki respektu} są większe od \textit{współczynnika respektu} bieżącego robota (linia: 12). Algorytm zakłada, iż roboty o mniejszym \textit{współczynniku respektu} ustąpią pierwszeństwa robotowi o wyższym \textit{współczynniku respektu}. Procedura powtarzana jest dopóty, dopóki wszystkie cele robota nie zostaną osiągnięte (linia: 15).}
 \end{frame}
 
-\subsection{Pseudo-kod implementacja algorytmu Respect+ (R+)}
+\subsection*{Pseudo-kod implementacja algorytmu Respect+ (R+)}
 \begin{frame}
 \frametitle{\subsecname}
 \scriptsize{		
@@ -284,7 +273,7 @@ Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikaj�
 
 \end{frame}
 
-\section{Integracja zjawiska respektu z czynnikiem przejścia przez drzwi}
+\section*{Integracja zjawiska respektu z czynnikiem przejścia przez drzwi}
 \begin{frame}
 \frametitle{\secname}
 
@@ -302,7 +291,7 @@ Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikaj�
 
 \end{frame}
 
-\subsection{Pseudo-kod implementacja algorytmu Passage Factor (PF)}
+\subsection*{Pseudo-kod implementacja algorytmu Passage Factor (PF)}
 \begin{frame}
 \frametitle{\subsecname}
 \scriptsize{		
@@ -335,7 +324,7 @@ Wśród ludzi obserwuje się również podświadomą chęć grupowania, wynikaj�
 \end{frame}		
 
 
-\subsection{Pseudo-kod implementacja algorytmu  Passage Factor (PF+)}
+\subsection*{Pseudo-kod implementacja algorytmu  Passage Factor (PF+)}
 \begin{frame}
 \frametitle{\subsecname}
 \scriptsize{		
@@ -464,116 +453,11 @@ W stworzonej metodzie pierwszeństwo poruszania się mają roboty nadjeżdżają
 
 \end{frame}
 
-\section{Wyniki eksperymentów symulacyjnych}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{\textit{Otwarta przestrzeń prostopadłe} ustawienie: \textit{1-2}.}
 
-\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
-	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-		\centering
-		\includegraphics[page = 2, width=0.4\paperwidth]{img/Simulation_Open_space.pdf}
-\end{figure}
-\end{textblock*}
+\input{Wyniki}
+\input{Wnioski}
 
-\begin{textblock*}{\paperwidth}(0cm,5.45cm)
-\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-	\captionsetup[subfigure]{labelformat=empty}
-	\centering
-	\subfloat[][R]
-	{		
-		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-	}
-	\subfloat[][RVO]
-	{
-		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-	}
-	\subfloat[][PR]
-	{	
-		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-	}
-	\subfloat[][R+]
-	{
-		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-	}
-\end{figure}
-\end{textblock*}
-\end{frame}
-
-
-\section{Wyniki eksperymentów symulacyjnych}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{\textit{Przejście przez drzwi} ustawienie: \textit{1-2}.}
-
-\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
-	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-		\centering
-		\includegraphics[page = 2, width=0.4\paperwidth]{img/Simulation_Passage_through_the_door.pdf}
-	\end{figure}
-\end{textblock*}
-
-\begin{textblock*}{\paperwidth}(0cm,5.45cm)
-	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-		\captionsetup[subfigure]{labelformat=empty}
-		\centering
-		\subfloat[][R]
-		{		
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][PF]
-		{
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][R+]
-		{	
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][PF+]
-		{
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-	\end{figure}
-\end{textblock*}
-\end{frame}
-
-
-
-\section{Wyniki eksperymentów symulacyjnych}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{\textit{Wąski korytarz} ustawienie: \textit{8-3}}
-
-\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
-	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-		\centering
-		\includegraphics[page = 73, width=0.4\paperwidth]{img/Simulation_A_narrow_corridor.pdf}
-	\end{figure}
-\end{textblock*}
-
-\begin{textblock*}{\paperwidth}(0cm,5.45cm)
-	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
-		\captionsetup[subfigure]{labelformat=empty}
-		\centering
-		\subfloat[][R]
-		{		
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][RVO]
-		{
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][PR]
-		{	
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-		\subfloat[][R+]
-		{
-			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-		}
-	\end{figure}
-\end{textblock*}
-\end{frame}
+\end{document}
 
 
 %%Document
@@ -659,54 +543,6 @@ W stworzonej metodzie pierwszeństwo poruszania się mają roboty nadjeżdżają
 
 
 
-\section{Eksperyment na rzeczywistych robotach}
-\begin{frame}
-\frametitle{\secname}
-
-\begin{itemize}
-	\item Obudowa A4WD1v2 Lynxmotion 22cm x 20cm x 6cm.
-	\item Zasilanie dwie baterie litowo-polimerowe o nominalnym napięciu 14.8V i pojemności 5Ah.
-	\item Sterowniki silników RoboClaw 2 x 15A firmy BasicMicro.
-	\item Komputer sterujący PandaBoard ES:	
-	\begin{itemize}
-		\item dwurdzeniowy procesor Cortex-A9 OMAP4460 taktowany zegarem 1,2 GHz,
-		\item RAM 1GB,
-		\item Ethernet RJ45 100Mb,
-		\item WiFi 802.11 b/g/n i Bluetooth 2.1,
-		\item USB 2.0,
-		\item I2C,
-		\item SPI.
-	\end{itemize}
-	\item Skaner laserowy URG-04LX-UG01 firmy Hokuyo.	
-\end{itemize}
-
-\begin{textblock*}{4cm}(8.5cm,5.2cm) % {block width} (coords)
-	\includegraphics[page=1,width=4cm]{img/Rysunki.pdf}
-\end{textblock*}
-
-\tiny{
-Open Source Hardware \\
-Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
-
-\note{W celu zweryfikowania poprawności działania algorytmów wykorzystano platformę CAPO }
-\end{frame}
-
-
-
-
-
-\section{Wyniki eksperymentów z wykorzystaniem  rzeczywistych robotów}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{Otwarta przestrzeń ustawienia prostopadłe}
-
-\begin{figure}[!ht]
-\centering
-	\includegraphics[page = 1, width=0.49\textwidth]{img/Robots_Open_space.pdf}
-	\includegraphics[page = 2, width=0.49\textwidth]{img/Robots_Open_space.pdf}
-\end{figure}
-
-
 %\begin{figure}[!ht]
 %	\centering
 %	\begin{subfigure}[b]{0.49\textwidth}
@@ -719,19 +555,10 @@ Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
 %	\end{subfigure}
 %\end{figure}
 
-\end{frame}
+%\end{frame}
 
 
-\section{Wyniki eksperymentów z wykorzystaniem  rzeczywistych robotów}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{Przejście przez drzwi}
 
-\begin{figure}[!ht]
-	\centering
-		\includegraphics[page = 1, width=0.49\textwidth]{img/Robots_Passage_through_the_door.pdf}
-		\includegraphics[page = 2, width=0.49\textwidth]{img/Robots_Passage_through_the_door.pdf}
-\end{figure}
 
 
 %\begin{figure}[!ht]
@@ -748,115 +575,26 @@ Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
 %	\label{fig:Robot_1_H1}
 %\end{figure}
 
-\end{frame}
+%\end{frame}
 
 
-
-
-\section{Wyniki eksperymentów symulacyjnych}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{otwarta przestrzeń 1-2}
-
-
-
-\begin{figure}[!hb]
-
-	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenR1-2.mpg}
-	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
-	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenPR1-2.mpg}
-	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenR+1-2.mpg}
-\end{figure}
-
-
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section*{Wnioski i kierunki rozwoju}
-\begin{frame}
-\frametitle{\secname}
-
-\begin{itemize}
-	\item Prosty reaktywny zestaw reguł sprawdza się w zatłoczonym środowisku, w którym bieżąca sytuacja zmienia się w sposób bardzo dynamiczny. 
-	
-	\item Nie wszystkie wzorce zachowań dają dobre rezultaty w każdej sytuacji.
-	
-	\item Wymuszenie ustępowania pierwszeństwa w wąskich traktach komunikacyjnych zwiększa jego przepustowość. 
-	
-	\item W bardziej skomplikowanych środowiskach, takich jak na przykład \textit{wąski korytarz} napotykamy na problem ,,przepychania'' się robotów.
-	
-\end{itemize}
-
-\note{
-		
-\begin{itemize}
-	\item Bazując wyłącznie na zdefiniowanych regułach behawioralnych oraz zasadzie pierwszeństwa jesteśmy w stanie zarządzać grupą robotów w mniej lub bardziej skomplikowanych środowiskach.
-	
-	\item Przykładem takim może być \textit{zasada prawej dłoni} bazująca na ustępowaniu pierwszeństwa jadącym z prawej strony i dobrze sprawdzająca się na skrzyżowaniach.  Metoda nie radzi sobie najlepiej przy ograniczonej ilości przestrzeni. W takiej sytuacji konieczne jest stosowanie innych metod zarządzania grupą robotów na przykład bazujących na zjawisku respektu.
-	
-	\item  W środowiskach bardziej skomplikowanych, jak  \textit{przejście przez drzwi}, lepiej radzą sobie metody, które wymuszają przepustowość traktu komunikacyjnego.  Podnosząc priorytet robotom, które wychodzą z pomieszczenia udrażniamy przejście i tym samym zwiększamy jego przepustowość. 
-	
-	\item W bardzie skąplikowanych środowiskach koniecznej jest poszukiwanie innych metod koordynacji ruchu robotów.
-	
-\end{itemize}	
-}
-\end{frame}
-	
-
-
-\section*{Wnioski i kierunki rozwoju}
-\begin{frame}
-\frametitle{\secname}
-
-\begin{center}
-	\textbf{Możliwe jest stworzenie zdecentralizowanego behawioralnego algorytmu sterowania ruchem robotów opartego na zachowaniu, inspirowanego postępowaniem przemieszczających się osób.}
-\end{center}
-
-\note{
-	
-Analizując poszczególne eksperymenty można stwierdzić, iż postawiona teza pracy została udowodniona. Możliwe jest stworzenie zdecentralizowanego behawioralnego algorytmu sterowania ruchem robotów opartego na zachowaniu, inspirowanego postępowaniem przemieszczających się osób. Rozwiązanie to sprawdza się w środowiskach, w których konieczne jest skuteczne koordynowanie grupą robotów działających w dynamicznie zmieniającym się środowisku.
-}
-\end{frame}
-
-\section*{Wnioski i kierunki rozwoju}
-\begin{frame}
-\frametitle{\secname}
-\framesubtitle{Metoda hybrydowa}
-
-%TODO Wstawić rysunek metody hybrydowej
-\note{
-Oczywiście nie każda z metod jest na tyle uniwersalna, że można ją stosować we wszystkich przypadkach. Konieczne jest zatem dobieranie do danej sytuacji metod ją rozwiązujących. 
-
-Połączenie kilku algorytmów, w jedno spójne rozwiązanie, umożliwi dostosowanie rozwiązania w zależności od bieżącej sytuacji. Taka zintegrowana metoda hybrydowa koordynacji ruchu pozwoli na optymalizację działania robota dla konkretnego przypadku. 
-
-}
-\end{frame}
-
-\begin{frame}
-
-\begin{center}
-	Dziękuje za uwagę
-\end{center}
-
-\end{frame}
-
-
-\end{document}
-
-
-
-
+%\section{Wyniki eksperymentów symulacyjnych}
+%\begin{frame}
+%\frametitle{\secname}
+%\framesubtitle{otwarta przestrzeń 1-2}
+%
+%
+%
+%\begin{figure}[!hb]
+%	
+%	%	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenR1-2.mpg}
+%	%	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+%	%	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenPR1-2.mpg}
+%	%	\includemovie[autoplay,repeat]{2cm}{2cm}{mov/OtwartaPrzestrzenR+1-2.mpg}
+%\end{figure}
+%
+%
+%\end{frame}
 
 %
 %
