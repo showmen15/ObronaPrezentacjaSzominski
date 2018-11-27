@@ -18,7 +18,11 @@
 \usepackage{algorithmic}
 
 \usepackage[absolute,overlay]{textpos}
+
+\usepackage[font=tiny]{subfig}
 \usepackage{graphicx}
+
+
 
 %https://gist.github.com/andrejbauer/ac361549ac2186be0cdb
 \usepackage{pgfpages}
@@ -37,6 +41,9 @@
 %\institute{Katedra Telekomunikacji}
 %\website{\url{http://www.kt.agh.edu.pl/~wydrych/}}
 \date{\today}
+
+%TODO Numeracja do lewej 
+%TODO numercja z pierszej strony ma zniknac
 
 \begin{document}
 	
@@ -395,6 +402,263 @@ W stworzonej metodzie pierwszeństwo poruszania się mają roboty nadjeżdżają
 
 \end{frame}		
 
+
+\section{Przypadki testowe}
+\begin{frame}
+\frametitle{\secname}
+
+\begin{itemize}
+	\item Otwarta przestrzeń.
+	\item Przejście przez drzwi.	
+	\item Wąski korytarz.
+	\item Skrzyżowanie równorzędne.
+	\item Skrzyżowanie typu 8.
+	\item Mijanka.	
+\end{itemize}
+
+\begin{textblock*}{8cm}(6.6cm,1.85cm) % {block width} (coords)
+	
+	\includegraphics[page=5,width=3cm]{img/experimental_results.pdf}
+	\includegraphics[page=18,width=3cm]{img/experimental_results.pdf}
+	
+	\includegraphics[page=6,width=3cm]{img/experimental_results.pdf}	
+	\includegraphics[page=8,width=3cm]{img/experimental_results.pdf}
+	
+	\includegraphics[page=9,width=3cm]{img/experimental_results.pdf}
+	\includegraphics[page=10,width=3cm]{img/experimental_results.pdf}
+	
+\end{textblock*}
+
+\begin{textblock*}{5cm}(1.2cm,7.8cm) % {block width} (coords)
+	\includegraphics[page=11,width=5cm]{img/experimental_results.pdf}	
+\end{textblock*}
+
+\note{
+	
+	Ustawienie prostopadłe: 
+	1-1 do 10-10 robotów
+	
+	Skos:
+	4 roboty 
+	Zadanie 1 polegało na przejechaniu po skosie do punktu leżącego po przekątnej
+	Zadanie 2 polegało na przejechaniu po skosie do punktu leżącego po przekątnej oraz powrót do punktu startu
+	
+	Przejście przez drzwi:
+	1-H1 do 10-H10
+	Oraz 
+	H1-1 do H1-1
+	H – w którym pomieszczeniu roboty miały wyższy bazowy współczynnik respektu.
+	
+	Wąski korytarz:
+	1-1 do 10-10
+	
+	Skrzyżowania:
+	Dwa roboty
+	
+	Dwa roboty
+	Cztery roboty
+	
+	Mijanka:
+	1-H1
+	H1-1}
+
+\end{frame}
+
+\section{Wyniki eksperymentów symulacyjnych}
+\begin{frame}
+\frametitle{\secname}
+\framesubtitle{\textit{Otwarta przestrzeń prostopadłe} ustawienie: \textit{1-2}.}
+
+\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
+	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+		\centering
+		\includegraphics[page = 2, width=0.4\paperwidth]{img/Simulation_Open_space.pdf}
+\end{figure}
+\end{textblock*}
+
+\begin{textblock*}{\paperwidth}(0cm,5.45cm)
+\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+	\captionsetup[subfigure]{labelformat=empty}
+	\centering
+	\subfloat[][R]
+	{		
+		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+	}
+	\subfloat[][RVO]
+	{
+		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+	}
+	\subfloat[][PR]
+	{	
+		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+	}
+	\subfloat[][R+]
+	{
+		\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+	}
+\end{figure}
+\end{textblock*}
+\end{frame}
+
+
+\section{Wyniki eksperymentów symulacyjnych}
+\begin{frame}
+\frametitle{\secname}
+\framesubtitle{\textit{Przejście przez drzwi} ustawienie: \textit{1-2}.}
+
+\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
+	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+		\centering
+		\includegraphics[page = 2, width=0.4\paperwidth]{img/Simulation_Passage_through_the_door.pdf}
+	\end{figure}
+\end{textblock*}
+
+\begin{textblock*}{\paperwidth}(0cm,5.45cm)
+	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+		\captionsetup[subfigure]{labelformat=empty}
+		\centering
+		\subfloat[][R]
+		{		
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][PF]
+		{
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][R+]
+		{	
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][PF+]
+		{
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+	\end{figure}
+\end{textblock*}
+\end{frame}
+
+
+
+\section{Wyniki eksperymentów symulacyjnych}
+\begin{frame}
+\frametitle{\secname}
+\framesubtitle{\textit{Wąski korytarz} ustawienie: \textit{8-3}}
+
+\begin{textblock*}{0.4\paperwidth}(0.3\paperwidth,0.85cm)
+	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+		\centering
+		\includegraphics[page = 73, width=0.4\paperwidth]{img/Simulation_A_narrow_corridor.pdf}
+	\end{figure}
+\end{textblock*}
+
+\begin{textblock*}{\paperwidth}(0cm,5.45cm)
+	\begin{figure}[ht] % h:here; t:top; b:bottom; p:page; default:ht
+		\captionsetup[subfigure]{labelformat=empty}
+		\centering
+		\subfloat[][R]
+		{		
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][RVO]
+		{
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][PR]
+		{	
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+		\subfloat[][R+]
+		{
+			\includemovie[autoplay,repeat]{0.235\paperwidth}{3cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+		}
+	\end{figure}
+\end{textblock*}
+\end{frame}
+
+
+%%Document
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[page = 2, width=0.3\linewidth]{img/Simulation_Open_space.pdf}
+%	\caption[short for lof]{long figure caption}
+%	\label{fig:default}
+%\end{figure}
+
+%\begin{figure}[htbp] % h:here; t:top; b:bottom; p:page; default:ht
+%	\centering
+%	\subfloat[short for lof][long subfigure1 caption]{
+%		\includegraphics[width=0.3\linewidth]{img/Simulation_Open_space.pdf}
+%		\label{subfig:fig1}
+%	}
+%	\subfloat[short for lof][long subfigure2 caption]{
+%		\includegraphics[width=0.3\linewidth]{img/Simulation_Open_space.pdf}
+%		\label{subfig:fig2}
+%	}
+%	\caption[short for lof]{long figure caption}
+%\end{figure}
+
+
+%\begin{textblock*}{\textwidth}(0.0cm,0cm)
+%	To jest tkest
+%	\textblockcolour{red}
+%\begin{figure}[!hb]
+%	\includegraphics[page = 2, width=0.45\textwidth]{img/Simulation_Open_space.pdf}
+%\end{figure}
+%\end{textblock*}
+
+%\begin{textblock*}{\paperwidth}(0.0cm,0cm)
+%	\textblockcolour{red}
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenR1-2.mpg}
+%	\caption*{\textit{Zadanie 1}}
+%\end{figure}
+%
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+%	\caption*{\textit{Zadanie 1}}
+%\end{figure}
+%
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+%	\caption*{\textit{Zadanie 1}}
+%\end{figure}
+%
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+%	\caption*{\textit{Zadanie 1}}
+%\end{figure}
+%\end{textblock*}
+
+%\end{frame}
+
+%
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenR1-2.mpg}
+%\end{figure}
+%\begin{figure}
+%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenRVO1-2.mpg}
+%\end{figure}
+%\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenPR1-2.mpg}
+%\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/OtwartaPrzestrzenR+1-2.mpg}
+
+%\begin{figure}[!ht]
+%	\centering	
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[page=18, width=\textwidth]{06_experimental_results/simulation/img/experimental_results.pdf}
+%		\caption{\textit{Zadanie 1}}	
+%		\label{fig:Schemat_Open_space_Circle_Skos_zadanie1}	
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.49\textwidth}
+%		\includegraphics[page=19, width=\textwidth]{06_experimental_results/simulation/img/experimental_results.pdf}
+%		\caption{\textit{Zadanie 2}}
+%		\label{fig:Schemat_Open_space_Circle_Skos_zadanie2}
+%	\end{subfigure}
+%	\caption{Przykładowe ustawienie robotów w \textit{otwartej przestrzeni skos}.}
+%	\label{fig:Schemat_Open_space_Circle_Skos_zadanie1_2}
+%\end{figure}
+
+
+
 \section{Eksperyment na rzeczywistych robotach}
 \begin{frame}
 \frametitle{\secname}
@@ -428,66 +692,7 @@ Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
 \end{frame}
 
 
-\section{Przypadki testowe}
-\begin{frame}
-\frametitle{\secname}
 
-\begin{itemize}
-	\item Otwarta przestrzeń.
-	\item Przejście przez drzwi.	
-	\item Wąski korytarz.
-	\item Skrzyżowanie równorzędne.
-	\item Skrzyżowanie typu 8.
-	\item Mijanka.	
-\end{itemize}
-
-\begin{textblock*}{8cm}(6.6cm,1.85cm) % {block width} (coords)
-	
-	\includegraphics[page=5,width=3cm]{img/experimental_results.pdf}
-	\includegraphics[page=18,width=3cm]{img/experimental_results.pdf}
-	
-	\includegraphics[page=6,width=3cm]{img/experimental_results.pdf}	
-	\includegraphics[page=8,width=3cm]{img/experimental_results.pdf}
-	
-	\includegraphics[page=9,width=3cm]{img/experimental_results.pdf}
-	\includegraphics[page=10,width=3cm]{img/experimental_results.pdf}
-	
-\end{textblock*}
-
-\begin{textblock*}{5cm}(1.2cm,7.8cm) % {block width} (coords)
-	\includegraphics[page=11,width=5cm]{img/experimental_results.pdf}	
-\end{textblock*}
-
-\note{
-
-Ustawienie prostopadłe: 
-1-1 do 10-10 robotów
-
-Skos:
-4 roboty 
-Zadanie 1 polegało na przejechaniu po skosie do punktu leżącego po przekątnej
-Zadanie 2 polegało na przejechaniu po skosie do punktu leżącego po przekątnej oraz powrót do punktu startu
-
-Przejście przez drzwi:
-1-H1 do 10-H10
-Oraz 
-H1-1 do H1-1
-H – w którym pomieszczeniu roboty miały wyższy bazowy współczynnik respektu.
-
-Wąski korytarz:
-1-1 do 10-10
-
-Skrzyżowania:
-Dwa roboty
-
-Dwa roboty
-Cztery roboty
-
-Mijanka:
-1-H1
-H1-1}
-
-\end{frame}
 
 
 \section{Wyniki eksperymentów z wykorzystaniem  rzeczywistych robotów}
