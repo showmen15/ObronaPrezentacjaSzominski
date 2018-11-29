@@ -20,6 +20,14 @@
 \def\@website{\@empty}
 \def\website#1{\def\@website{#1}}
 
+\def\@supervisorPL{\@empty}
+\def\supervisorPL#1{\def\@supervisorPL{#1}}
+
+\def\@supervisorPLsecond{\@empty}
+\def\supervisorPLsecond#1{\def\@supervisorPLsecond{#1}}
+
+
+
 \definecolor{AGHgreen}{rgb}{0,0.412,0.236}
 \definecolor{AGHblack}{rgb}{0.118,0.118,0.118}
 \definecolor{AGHred}{rgb}{0.655,0.099,0.189}
@@ -68,12 +76,14 @@
 
 \setbeamerfont{title}{size=\normalsize}
 \setbeamerfont{subtitle}{size=\footnotesize}
-\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{author}{size=\small}
 \setbeamerfont{website}{size=\tiny}
 \setbeamerfont{institute}{size=\tiny}
 \setbeamerfont{date}{size=\tiny}
+\setbeamerfont{supervisorPL}{size=\scriptsize}
+\setbeamerfont{supervisorPLsecond}{size=\scriptsize}
 \setbeamertemplate{title page}{%
-    \begin{beamercolorbox}[ht=.3963\paperheight]{title}\end{beamercolorbox}
+    \begin{beamercolorbox}[ht=.3563\paperheight]{title}\end{beamercolorbox}
     \begin{beamercolorbox}[left,leftskip=.1614\paperwidth]{title}
       \usebeamerfont{title}\inserttitle\par%
       \ifx\insertsubtitle\@empty%
@@ -82,23 +92,19 @@
         {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
       \fi%
     \end{beamercolorbox}%
-    \vfill\vfill%
+    \vfill%
     \begin{beamercolorbox}[left,leftskip=.1614\paperwidth]{author}%
       \usebeamerfont{author}\insertauthor%
     \end{beamercolorbox}%
-    %\vfill%
-    \ifx\@website\@empty%
-    \else%
-      \begin{beamercolorbox}[left,leftskip=.1614\paperwidth]{website}%
-        \usebeamerfont{website}\@website%
-      \end{beamercolorbox}%
-    \fi%
     \vfill%
-    \begin{beamercolorbox}[left,leftskip=.1614\paperwidth]{institute}%
-      \usebeamerfont{institute}\insertinstitute%
+	\begin{beamercolorbox}[left,leftskip=.4614\paperwidth]{supervisorPL}%
+		\usebeamerfont{supervisorPL}\tiny{\scshape Promotor:\newline}\scriptsize{\@supervisorPL}%
+	\end{beamercolorbox}%
+   	\begin{beamercolorbox}[left,leftskip=.4614\paperwidth]{supervisorPLsecond}%
+    	\usebeamerfont{supervisorPLsecond}\tiny{\scshape Promotor pomocniczy:\newline} \scriptsize{\@supervisorPLsecond}%
     \end{beamercolorbox}%
     \vfill%
-    \begin{beamercolorbox}[left,leftskip=.1614\paperwidth]{date}%
+    \begin{beamercolorbox}[,leftskip=.1614\paperwidth]{date}%
       \usebeamerfont{date}\insertdate% 
     \end{beamercolorbox}%
 }

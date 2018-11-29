@@ -1,14 +1,7 @@
-\section*{}
+\section*{1. pytanie prof. Stanisława Ambroszkiewicza}
 \begin{frame}
 \frametitle{\secname}
-\begin{center}
-	\textbf{Czy przedstawiony  system wielo-robotowy jest rzeczywiście systemem rozproszonym?}
-\end{center}
-\end{frame}
-
-\section*{}
-\begin{frame}
-\frametitle{\secname}
+\framesubtitle{Czy przedstawiony  system wielo-robotowy jest rzeczywiście systemem rozproszonym?}
 
 W literaturze znaleźć można różne definicje systemów rozproszonych (ang. distributed system). Tanenbaum w książce ,,Distributed systems: principles and paradigms''  definiują system rozproszony jako \textit{zbiór niezależnych urządzeń technicznych (komputerów) połączonych w jedną spójną logicznie całość}.
 
@@ -36,17 +29,10 @@ Przytoczone cechy systemu rozproszonego zostały spełnione w skonstruowanym sys
 }
 \end{frame}
 
-\section*{}
+\section*{2. pytanie prof. Stanisława Ambroszkiewicza}
 \begin{frame}
 \frametitle{\secname}
-\begin{center}
-	\textbf{Czy jest on otwarty, tj. czy nowe roboty i nowe powierzchnie do poruszania się dla tych robotów mogą być dodawane lub usuwane dynamicznie, a algorytmy nadal działają poprawnie?}
-\end{center}
-\end{frame}
-
-\section*{}
-\begin{frame}
-\frametitle{\secname}
+\framesubtitle{Czy jest on otwarty, tj. czy nowe roboty i nowe powierzchnie do poruszania się dla tych robotów mogą być dodawane lub usuwane dynamicznie, a algorytmy nadal działają poprawnie?}
 
 System posiada również cechę otwartości rozumianą jako możliwość rozbudowy systemu pod względem sprzętowym jak i programowym. Rozbudowa pod względem sprzętowym polega na dołączaniu do platformy CAPO nowych modułów poszerzających jego możliwości operacyjne. 
 \newline
@@ -66,35 +52,20 @@ Reasumując, ze względu na to, iż wszystkie algorytmy są całkowicie bezstano
 \end{frame}
 
 
-\section*{}
+\section*{3. pytanie prof. Stanisława Ambroszkiewicza}
 \begin{frame}
 \frametitle{\secname}
-\begin{center}
-	\textbf{Jak jest faktyczna autonomia i niezależność robotów?}
-\end{center}
-\end{frame}
-
-\section*{Jak jest faktyczna autonomia i niezależność robotów?}
-\begin{frame}
-\frametitle{\secname}
+\framesubtitle{Jak jest faktyczna autonomia i niezależność robotów?}
 
 Autonomia robotów (rozważana w kontekście sterownia i zarządzania grupą robotów mobilnych) umożliwia robotom niezależne wyznaczanie bezkolizyjnej trajektorii ruchu bez konieczności uzgadniania działań z innymi uczestnikami ruchu. Zadanie to jest realizowane w sposób całkowicie autonomiczny przez samego robota.  W oparciu o dane wejściowe (lokalizacji wraz z orientacją), robot podejmuje decyzję o wyborze trajektorii wyznaczonej w oparciu o jeden z algorytmów koordynacji.
 
 \end{frame}
 
 
-
-\section*{}
+\section*{4. pytanie prof. Stanisława Ambroszkiewicza}
 \begin{frame}
 \frametitle{\secname}
-\begin{center}
-	\textbf{W eksperymentach roboty komunikują się z centralnym serwerem. A więc nie są one autonomiczne.  Czy nie prościej byłoby dodać prosty protokół komunikacyjny pomiędzy robotami, które siebie widzą, zachowując w ten sposób autonomiczność robotów}
-\end{center}
-\end{frame}
-
-\section*{}
-\begin{frame}
-\frametitle{\secname}
+\framesubtitle{\tiny{W eksperymentach roboty komunikują się z centralnym serwerem. A więc nie są one autonomiczne.  Czy nie prościej byłoby dodać prosty protokół komunikacyjny pomiędzy robotami, które siebie widzą, zachowując w ten sposób autonomiczność robotów?}}
 
 Robot otrzymuje jedynie informacje o lokalizacji  oraz orientacji swojej oraz innych robotów z serwera lokalizacji. Procedura jest całkowicie niezależna od decyzji i operacji  wykonywanych przez roboty. Wszystkie roboty nasłuchują informacji wysyłanych z~serwera lokalizacji. Cały proces nie wymaga od nich zestawienia połączenia między sobą i jest niezależny od pozostałych działań poszczególnych uczestników ruchu. 
 \newline
