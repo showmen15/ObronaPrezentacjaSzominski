@@ -15,6 +15,15 @@
 				\includegraphics[page = 99, width=0.49\textwidth]{img/Simulation_Open_space.pdf}
 			}
 \end{figure}
+
+\note{
+\begin{itemize}
+	\item Dla ustawienie 1-2 naslepszy łączny czas przjzdu robotów uzyskała algorytm PR. Jako drugi poradził sobie z zadaniem algorytm RVO. Algorytmy R+ oraz R osiągneły podobne rezultaty.
+
+	\item Przy wiekszej liczbie robotów sytuacja znacząco się zmienia. Algotytm R osiągął najlepszy czas jako drugi algorytm R+. Trzecie miejsce to algrotym RVO zaś najgorzej poradziła sobie metoda PR.
+\end{itemize}
+}
+
 \end{frame}
 
 \section*{Wyniki eksperymentów symulacyjnych}
@@ -33,6 +42,21 @@
 			\includegraphics[page = 88, width=0.49\textwidth]{img/Simulation_Passage_through_the_door.pdf}
 		}
 \end{figure}
+
+\note{
+
+\begin{itemize}
+	\item Metoda RVO oraz PR nie poradziły sobie zarówni w ustawieniu 1-H2 oraz 9-H8. Roboty wzajemnie zakleszczyły się w przed przejściem.
+	
+	\item W obu ustawieniach wyraźnie zaznacza się trand iż metoda PF, PF+ jest nieco lepsza niż metoda R, R+
+	
+	\item Algoryrmy R+ oraz PF+ osiągneły gorsze wyniki niż metody R oraz R+
+\end{itemize}
+
+Litera H – oznaczon w którym pomieszczeniu roboty miały wyższe bazowy współczynnik respektu.
+
+}
+
 \end{frame}
 
 \section*{Wyniki eksperymentów symulacyjnych}
@@ -48,7 +72,28 @@
 		\includegraphics[page = 73, width=0.6\textwidth]{img/Simulation_A_narrow_corridor.pdf}
 	}
 \end{figure}
+
+\note{
+	
+	\begin{itemize}
+		\item Również i w wąskim korytarzu metody RVO i PR nie poradziły sobie z zadniem.
+		\item Metoda R osiągneła znacznie lepszy czas przejazdu niż metoda R+
+	\end{itemize}
+}
+
 \end{frame}
+
+\section*{Materiał wideo}
+\begin{frame}
+\frametitle{\secname}
+
+Tu powstaje film 1min z eksperymentów symulacyjnych który będzie zawierał:
+
+Otwarta przestrzeń ustawienie 1-2 algorytmy R RVO, PR R+
+Przejście przez drzwi ustawienie 9-H8 algorytmy R PF RVO, PR R+, PF+
+Wąski korytarz ustawienie 8-3 algorytmy R RVO, PR R+
+\end{frame}
+
 
 \section*{Eksperyment na rzeczywistych robotach}
 \begin{frame}
@@ -78,7 +123,20 @@
 	Open Source Hardware \\
 	Strona projektu: \url{http://capo.iisg.agh.edu.pl/}}
 
-\note{W celu zweryfikowania poprawności działania algorytmów wykorzystano platformę CAPO zbudowaną na AGH.}
+\note{
+W celu zweryfikowania poprawności działania algorytmów wykorzystano platformę Czterokołową Autonomiczną Platformę Mobilną CAPO zbudowaną na AGH.
+
+Platforma:
+
+\begin{itemize}
+	\item zasilana jest z dwóch baterii litowo-polimerowych, 
+	\item napędzane jest przez 4 silniki kontrolwane przez dwa kontrolery RoboClaw 2 x 15A firmy BasicMicro,
+	\item które kontroluje komputer starujący PandaBoard ES.
+\end{itemize}
+
+Platforma może być dowolnie konfigurowana. Na rysunku widzimy robota CAPO z zaistalowanym skanerem laserowym firmy Hokuyo.
+
+}
 \end{frame}
 
 \section{Wyniki eksperymentów z wykorzystaniem rzeczywistych robotów}
@@ -93,6 +151,16 @@
 		\includegraphics[page = 2, width=0.6\textwidth]{img/Robots_Open_space.pdf}
 	}
 \end{figure}
+
+\note{
+\begin{itemize}
+	\item Najlepiej z przejazdem poradziła sobie metoda PR.
+	\item Metody R oraz R+ osiągneły podobny rezultat.
+	\item Metoda RVO zakończyła swoje działanie jako ostatnia.
+\end{itemize}
+
+}
+
 \end{frame}
 
 \section*{Wyniki eksperymentów z wykorzystaniem  rzeczywistych robotów}
@@ -107,4 +175,25 @@
 		\includegraphics[page = 2, width=0.6\textwidth]{img/Robots_Passage_through_the_door.pdf}
 	}
 \end{figure}
+
+\note{
+\begin{itemize}
+	\item Metody RVO oraz PR ze względu na brak rezultatów w symulacji nie byłu uruchamiana na rzeczywistych robotach.
+	\item Nalepiej poradziła sobie metoda PF+ oraz PF.
+	\item Algorytm R osiągnał trzeci wynik.
+	\item Najgorzej z zaniem poradziła sobie metoda R+.
+\end{itemize}
+	
+}
+
+\end{frame}
+
+\section*{Materiał wideo}
+\begin{frame}
+\frametitle{\secname}
+
+Tu powstaje film 1min z eksperymentów na rzeczywistych robotach który będzie zawierał:
+
+Otwarta przestrzeń ustawienie 1-2 algorytmy R RVO, PR R+
+Przejście przez drzwi ustawienie 1-H2 dla algorytmów R, PF, R+ PF+
 \end{frame}
