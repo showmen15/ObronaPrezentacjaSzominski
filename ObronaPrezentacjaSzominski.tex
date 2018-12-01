@@ -2,7 +2,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage{movie15}
+%\usepackage{movie15}
 \usepackage{hyperref}
 \usepackage{wrapfig}
 
@@ -24,7 +24,7 @@
 \usepackage[font=tiny]{subfig}
 \usepackage{graphicx}
 
-
+\usepackage{media9}
 
 %https://gist.github.com/andrejbauer/ac361549ac2186be0cdb
 \usepackage{pgfpages}
@@ -68,14 +68,14 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 \tableofcontents
 
 \note{
-\begin{itemize}
-	\item Co stanowiło inspiracje do stworzenia algorytmów koordynacji robotów, przestawię ich główne cechy, zaprezentuję najważniejsze  osiągnięcia pracy.
+\begin{itemize}	
+	\item Na kolejnych slajdach omówie co stanowiło inspiracje do stworzenia algorytmów koordynacji robotów, podam ich główne cechy, oraz najważniejsze  osiągnięcia pracy.
 
- \item W dalszej części przedstawię zjawisko respektu, zasadę priorytetyzowania wychodzących oraz zasadę prawej dłoni.
+ 	\item W dalszej części przedstawię zjawisko respektu, zasadę priorytetyzowania wychodzących oraz zasadę prawej dłoni.
 
-\item Zaprezentuje też wybrane przypadki testowe oraz wyniki eksperymentów symulacyjnych i na rzeczywistych robotach.
+	\item Zaprezentuje też wybrane przypadki testowe oraz wyniki eksperymentów symulacyjnych i na rzeczywistych robotach.
 
-\item Na koniec podam wnioski i kierunki dalszych rozwoju. 
+	\item Na koniec podam wnioski i kierunki dalszego rozwoju. 
 \end{itemize}
 
 }
@@ -89,10 +89,13 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 %TODO Ruch na skrzyżowaniach
 
 \begin{textblock*}{6.5cm}(1cm,2.5cm) % {block width} (coords)
+\footnotesize
 \begin{itemize}
+	\item Obserwacja poruszającego się tłumu.
 	\item Unikanie konfliktów z ,,większym'' lub ,,silniejszym'' osobnikiem.
 	\item Chęć grupowania.
 	\item Hierarchia społeczna.	
+	\item Poruszanie się w oparciu o zestaw reguł i zasad (np. prawo ruch drogowego).
 \end{itemize}
 \end{textblock*}
 
@@ -101,7 +104,7 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 	\tiny{Źródło: East News/Glow Images}
 \end{textblock*}
 
-\begin{textblock*}{6cm}(1.5cm,5.5cm) % {block width} (coords)
+\begin{textblock*}{6cm}(1.5cm,6.1cm) % {block width} (coords)
 	\includegraphics[page=4,width=6cm]{img/Rysunki.pdf}
 	\tiny{Źródło: www.itprotoday.com}
 \end{textblock*}
@@ -113,11 +116,15 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 \note{
 	
 \begin{itemize}
+	\item Ludzi czy zwierząt skutecznie koordynują przemieszczanie się bez jawnej komunikacji. 
+	
 	\item Zarówno wśród zwierząt jak i ludzi obserwuje się podświadome unikanie konfliktów z ,,większymi'' lub ,,silniejszymi'' osobnikami. Osobniki czujące się pewniej zakładają, iż ,,mniejsi'' ustąpią im miejsca.
 	
-\item Również wśród ludzi zaobserwować można skłonność do grupowanie wynikającą z pierwotnych instynktów, ale również przekazywania zdobytej wiedzy następnym pokoleniom.  Młodsze osobniki darzą należnym im, szacunkiem osobniki starsze. 
+	\item Również wśród ludzi zaobserwować można skłonność do grupowanie wynikającą z pierwotnych instynktów, ale również przekazywania zdobytej wiedzy następnym pokoleniom.  Młodsze osobniki darzą należnym im, szacunkiem osobniki starsze. 
 	
-\item W relacjach zawodowych widoczna jest najlepiej organizacja grupy społecznej.  Osoby zajmujące wysokie stanowiska kierowniczych, obdarzane są przez osoby na niższych stanowiskach respektem. Respekt nie wynika tylko z pozycji, jaką zajmuje dany osobnik w hierarchii.	Zjawisko to jest znacznie bardziej szerokie i właśnie ono, dzięki swojej złożoności stonowało inspiracje do stworzenia algorytmu koordynacji ruchu robotów mobilnych.
+	\item Poruszenie się we wspólnej przestrzeni regulowane jest również zestawem reguł, nakazów oraz zakazów jak np. prawo ruchu drogowego.
+	
+	\item Zjawiska te są znacznie bardziej szerokie i właśnie one, dzięki swojej złożoności stonowały inspiracje do stworzenia algorytmów koordynacji ruchu robotów mobilnych.
 \end{itemize}
 }
 
@@ -147,7 +154,7 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 
 \item W~rozwiązaniu brak jest centralnego planisty zarządzającego ruchem oraz nie występuje jawna komunikacja pomiędzy poszczególnymi uczestnikami ruchu. 
 
-\item Teza rozprawy sformułowana jest następująco:
+\item Teza rozprawy sformułowano następująco:
 
 \item \textbf{\textit{Behawioralny i zdecentralizowany algorytm sterowania ruchem robotów mobilnych, oparty o zachowania inspirowane postępowaniem przemieszczających się osób, może być wykorzystany do bezpiecznego i skutecznego koordynowania ruchu grup robotów działających w dynamicznie zmiennych środowiskach.}}
 \end{itemize}	
@@ -168,7 +175,8 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 	
 	\item Stworzenie modelu formalnego dedykowanego dla danych systemów.	
 	\item Stworzenie środowiska symulacyjnego (wirtualnego).
-	\item Szereg eksperymentów w środowisku wirtualnym oraz z wykorzystaniem rzeczywistych robotów.
+	\item Skonstruowanie Czterokołowej Autonomicznej Platformy mObilnej (CAPO).
+	\item Szereg eksperymentów w środowisku wirtualnym oraz z wykorzystaniem rzeczywistych robotów CAPO.
 	
 \end{itemize}
 
@@ -182,6 +190,7 @@ Do głównych osiągnięć pracy zaliczyć możemy:
 	
 	\item Stworzenie modelu formalnego dedykowanego dla danych systemów.	
 	\item Stworzenie środowiska symulacyjnego (wirtualnego).
+		\item Skonstruowanie Czterokołowej Autonomicznej Platformy mObilnej (CAPO)
 	\item Szereg eksperymentów w środowisku wirtualnym oraz z wykorzystaniem rzeczywistych robotów.
 	
 \end{itemize}
@@ -255,48 +264,97 @@ Bazując na \textit{zjawisku respektu} stworzono dwie metody, których działani
 \end{algorithmic}}
 
 \note{\footnotesize
-
-Pierwszy z algorytmów został nazwany Respect (R). Listing  przedstawia implementację w pseudo-kodzie poszczególnych kroków działania algorytmu R.
-
-Algorytm \textit{R} pobiera lokalizacje uczestników ruchu (linia: 3), wyznacza swój \textit{współczynnik respektu} zgodnie ze wzorem  (linia: 4). W kolejnym etapie metoda sprawdza czy trajektoria robota koliduje z trajektoriami pozostałych uczestników ruchu, czy też nie (linie: 5-6). Jeżeli trasa pokrywa się z trasą innego robota, w celu wyznaczenia pierwszeństwa dokonywane jest porównanie obliczonych \textit{współczynników respektu}. Gdy \textit{współczynnik respektu} jest mniejszy  niż \textit{współczynnik respektu} robota kolidującego, robot zmuszony jest do ustąpienia mu pierwszeństwa i wyznaczenia nowej trasy (linia: 11). Jeżeli trajektoria robota nie koliduje z robotem o większym \textit{współczynniku respektu}, robot wyznacza najkrótsza trasę do celu (linia: 13). Do wyznaczenia nowej bezkolizyjnej ścieżki w~algorytmie \textit{R} brane są pod uwagę wyłącznie te roboty, których obliczone \textit{współczynniki respektu} są większe od \textit{współczynnika respektu} bieżącego robota (linia: 11). Algorytm zakłada, iż roboty o mniejszym \textit{współczynniku respektu} ustąpią pierwszeństwa robotowi o wyższym \textit{współczynniku respektu}. Procedura powtarzana jest dopóty, dopóki wszystkie cele robota nie zostaną osiągnięte (linia: 16).}
+	
+	Kolejne kroki algorytmu bazującego na zjawisku respektu to:
+	
+	\begin{itemize}
+		\item  Pobiera lokalizacje uczestników ruchu (linia: 3),
+		\item  Wyznaczenie \textit{współczynnik respektu} zgodnie ze wzorem  (linia: 4),
+		\item  Sprawdzenie czy wyznaczone trajektroia nie koliduje z innymi robotami (linie: 5-6),
+		\item  Gdy koliduje wyznaczana jest nowa trajektorii ruchu (linie 8 i 11),
+		\item  Gdy nie koliduje wyznacz najkrtószą trasę do celu.
+		\item  Gdy cel osiągnięty zakończ sobie działanie (linia: 16)
+		
+		\item  Algorytm R zakłada, iż roboty o mniejszym \textit{współczynniku respektu} ustąpią pierwszeństwa robotowi o wyższym \textit{współczynniku respektu}. 
+		
+		\item W algorytmie \textit{R+} uwzględnia w wyznaczanieu trajektorii ruchu również roboty o niższym \textit{współczynniku respektu}.
+		
+	\end{itemize}
+}
 \end{frame}
 
-\subsection*{Pseudo-kod implementacja algorytmu Respect+ (R+)}
-\begin{frame}
-\frametitle{\subsecname}
-\scriptsize{		
-\begin{algorithmic}[1]	
-	
-	\REPEAT
-	
-	\STATE $ goal_{i} = \Upsilon(pos_{i}) $
-	
-	\STATE $ Z \gets RobotsWithFixedDistance(pos_{i},Rob) $
-	\STATE $ k_{i} \gets k(pos_{i},Z) $
-	
-	\STATE  $ robotsWithLowerRespectTooClose \gets GetLowerRespectRobots(k_{i},Z) $
-	
-	\STATE  $ robotsWithHigherRespect \gets GetHigherRespectRobots(k_{i},Z) $
-	
-	\STATE  $ allCollisionRobots \gets GetAllCollisionRobots(k_{i},Z) $
-	
-	\IF{$ robotsWithLowerRespectTooClose.Count > 0 $}
-	\STATE	$ \kappa(i, robotsWithLowerRespectTooClose) $ 
-	\ELSE			
-	\IF{$ robotsWithHigherRespect.Count > 0 $}
-	\STATE $ \kappa(i, robotsWithHigherRespect) $
-	\ELSE	
-	\STATE $ \kappa(i, allCollisionRobots) $ 
-	\ENDIF
-	\ENDIF
-	\UNTIL{$ goal_{i} \neq \varnothing $}
-\end{algorithmic}}
 
-\note{Listing przedstawia implementację w pseudo-kodzie poszczególnych kroków działania algorytmu Respect+ (R+)
+%\subsection*{Pseudo-kod implementacja algorytmu Respect (R)}
+%\begin{frame}
+%\frametitle{\subsecname}
+%\scriptsize{		
+%	\begin{algorithmic}[1]	
+%		\REPEAT
+%		
+%		\STATE $ goal_{i} = \Upsilon(pos_{i}) $
+%		
+%		\STATE $ Z \gets RobotsWithFixedDistance(pos_{i},Rob) $
+%		\STATE $ k_{i} \gets k(pos_{i},Z) $
+%		
+%		\STATE  $ robotsWithLowerRespectTooClose \gets GetLowerRespectRobots(k_{i},Z) $
+%		
+%		\STATE  $ robotsWithHigherRespect \gets GetHigherRespectRobots(k_{i},Z) $
+%		
+%		\IF{$ robotsWithLowerRespectTooClose.Count > 0 $}
+%		\STATE	$ \kappa(i, robotsWithLowerRespectTooClose) $ 
+%		\ELSE			
+%		\IF{$ robotsWithHigherRespect.Count > 0 $}
+%		\STATE $ \kappa(i, robotsWithHigherRespect) $
+%		\ELSE	
+%		\STATE $ \kappa(i, r_{i}) $ 
+%		\ENDIF
+%		\ENDIF
+%		\UNTIL{$ goal_{i} \neq \varnothing $}	
+%\end{algorithmic}}
+%
+%\note{\footnotesize
+%
+%Pierwszy z algorytmów został nazwany Respect (R). Listing  przedstawia implementację w pseudo-kodzie poszczególnych kroków działania algorytmu R.
+%
+%Algorytm \textit{R} pobiera lokalizacje uczestników ruchu (linia: 3), wyznacza swój \textit{współczynnik respektu} zgodnie ze wzorem  (linia: 4). W kolejnym etapie metoda sprawdza czy trajektoria robota koliduje z trajektoriami pozostałych uczestników ruchu, czy też nie (linie: 5-6). Jeżeli trasa pokrywa się z trasą innego robota, w celu wyznaczenia pierwszeństwa dokonywane jest porównanie obliczonych \textit{współczynników respektu}. Gdy \textit{współczynnik respektu} jest mniejszy  niż \textit{współczynnik respektu} robota kolidującego, robot zmuszony jest do ustąpienia mu pierwszeństwa i wyznaczenia nowej trasy (linia: 11). Jeżeli trajektoria robota nie koliduje z robotem o większym \textit{współczynniku respektu}, robot wyznacza najkrótsza trasę do celu (linia: 13). Do wyznaczenia nowej bezkolizyjnej ścieżki w~algorytmie \textit{R} brane są pod uwagę wyłącznie te roboty, których obliczone \textit{współczynniki respektu} są większe od \textit{współczynnika respektu} bieżącego robota (linia: 11). Algorytm zakłada, iż roboty o mniejszym \textit{współczynniku respektu} ustąpią pierwszeństwa robotowi o wyższym \textit{współczynniku respektu}. Procedura powtarzana jest dopóty, dopóki wszystkie cele robota nie zostaną osiągnięte (linia: 16).}
+%\end{frame}
 
-Metoda Respect+ (R+), podobnie jak metoda Respect (R), pobiera lokalizacje robotów (linia: 3), oblicza \textit{współczynnik respektu} (linia: 4), lecz wyznaczanie trajektorii ruchu przebiega w nieco odmienny sposób. W algorytmie \textit{R+} robot, który nie musi ustąpić pierwszeństwa ruchu przejazdu innym robotom, stara się pokonać trasę do celu bez modyfikowania swojej trajektorii. Jeżeli jednak nie jest możliwy bezkolizyjny ruch, dokonywana jest korekcja trajektorii uwzględniająca bieżącą pozycję innych uczestników ruchu (linia: 14). Robot, którego obliczony współczynnik respektu jest mniejszy od współczynników respektu pozostałych uczestników ruchu, zobligowany jest do zmiany swojej trasy w celu ustąpienia pierwszeństwa (linia: 12).}
-
-\end{frame}
+%\subsection*{Pseudo-kod implementacja algorytmu Respect+ (R+)}
+%\begin{frame}
+%\frametitle{\subsecname}
+%\scriptsize{		
+%\begin{algorithmic}[1]	
+%	
+%	\REPEAT
+%	
+%	\STATE $ goal_{i} = \Upsilon(pos_{i}) $
+%	
+%	\STATE $ Z \gets RobotsWithFixedDistance(pos_{i},Rob) $
+%	\STATE $ k_{i} \gets k(pos_{i},Z) $
+%	
+%	\STATE  $ robotsWithLowerRespectTooClose \gets GetLowerRespectRobots(k_{i},Z) $
+%	
+%	\STATE  $ robotsWithHigherRespect \gets GetHigherRespectRobots(k_{i},Z) $
+%	
+%	\STATE  $ allCollisionRobots \gets GetAllCollisionRobots(k_{i},Z) $
+%	
+%	\IF{$ robotsWithLowerRespectTooClose.Count > 0 $}
+%	\STATE	$ \kappa(i, robotsWithLowerRespectTooClose) $ 
+%	\ELSE			
+%	\IF{$ robotsWithHigherRespect.Count > 0 $}
+%	\STATE $ \kappa(i, robotsWithHigherRespect) $
+%	\ELSE	
+%	\STATE $ \kappa(i, allCollisionRobots) $ 
+%	\ENDIF
+%	\ENDIF
+%	\UNTIL{$ goal_{i} \neq \varnothing $}
+%\end{algorithmic}}
+%
+%\note{Listing przedstawia implementację w pseudo-kodzie poszczególnych kroków działania algorytmu Respect+ (R+)
+%
+%Metoda Respect+ (R+), podobnie jak metoda Respect (R), pobiera lokalizacje robotów (linia: 3), oblicza \textit{współczynnik respektu} (linia: 4), lecz wyznaczanie trajektorii ruchu przebiega w nieco odmienny sposób. W algorytmie \textit{R+} robot, który nie musi ustąpić pierwszeństwa ruchu przejazdu innym robotom, stara się pokonać trasę do celu bez modyfikowania swojej trajektorii. Jeżeli jednak nie jest możliwy bezkolizyjny ruch, dokonywana jest korekcja trajektorii uwzględniająca bieżącą pozycję innych uczestników ruchu (linia: 14). Robot, którego obliczony współczynnik respektu jest mniejszy od współczynników respektu pozostałych uczestników ruchu, zobligowany jest do zmiany swojej trasy w celu ustąpienia pierwszeństwa (linia: 12).}
+%
+%\end{frame}
 
 \section{Zasada priorytetyzowania wychodzących}
 \begin{frame}
@@ -472,9 +530,13 @@ Bazując na zintegrowanej zasadzie piorytetyzowanie wychodzących stworzono dwie
 
 \note{
 	
-W stworzonej metodzie pierwszeństwo poruszania się mają roboty nadjeżdżające z~prawej strony. Na listingu zaprezentowano kolejne etapy działania algorytmu PR.
+\begin{itemize}
+	\item W stworzonej metodzie pierwszeństwo poruszania się mają roboty nadjeżdżające z~prawej strony. Na listingu zaprezentowano kolejne etapy działania algorytmu PR.
 
-Jeżeli robot wykryje robota nadjeżdżającego z prawej strony, to w zaistniałej sytuacji zobligowany jest do ustąpienia mu pierwszeństwa. Robot zmienia swoją dotychczasową trajektorię ruchu starając się ominąć robota zbliżającego się z prawej strony (linia: 6). Gdy roboty wzajemnie się wyminą, robot wyznacza trajektorię do celu (linia: 8), aby powrócić do wykonywania powierzonego zadania.
+	\item Jeżeli robot wykryje robota nadjeżdżającego z prawej strony, to w zaistniałej sytuacji zobligowany jest do ustąpienia mu pierwszeństwa. 	
+	\item Robot zmienia swoją dotychczasową trajektorię ruchu aby ominać robota (linia: 6). 
+	\item Gdy roboty wzajemnie się wyminą, robot wyznacza trajektorię do celu (linia: 8), aby powrócić do wykonywania powierzonego zadania.
+\end{itemize}
 
 }
 
