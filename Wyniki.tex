@@ -27,25 +27,20 @@
 \end{frame}
 
 \section*{Wyniki eksperymentów symulacyjnych -- materiał wideo}
-\begin{frame}
+\begin{frame}[plain]
 \frametitle{\secname}
 \framesubtitle{Otwarta przestrzeń ustawienie prostopadłe 1-2}
 
-
-\begin{center}
-	\href{run:RobotSimulationOpenSpace.avi}{Materiał wideo}
-\end{center}
-
-%\begin{center}
-%	 \includemovie[poster]{300pt}{200pt}{./mov/RobotSimulationOpenSpace.swf} 
-%\end{center}
-
-%\begin{figure}
-%	\includemovie[autoplay,repeat]{0.24\paperwidth}{4cm}{mov/RobotSimulationOpenSpace.avi}
-%	\caption*{Otwarta przestrzeń ustawienie prostopadłe 1-2}
-%\end{figure}
-
-
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+	\includemedia[addresource=mov/RobotSimulationOpenSpace.mp4,
+	activate=pageopen,
+	transparent,
+	flashvars={source=mov/RobotSimulationOpenSpace.mp4},
+	width=\paperwidth,
+	height=\paperheight]{}{VPlayer.swf}%
+};
+\end{tikzpicture}
 \end{frame}
 
 
@@ -79,7 +74,23 @@
 Litera H – oznaczona w którym pomieszczeniu roboty miały wyższe bazowy współczynnik respektu.
 
 }
+\end{frame}
 
+\section*{Wyniki eksperymentów symulacyjnych -- materiał wideo}
+\begin{frame}[plain]
+\frametitle{\secname}
+\framesubtitle{Przejście przez drzwi ustawienie 9-H8}
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+	\includemedia[addresource=mov/RobotSimulationPassagePlace.mp4,
+	activate=pageopen,
+	transparent,
+	flashvars={source=mov/RobotSimulationPassagePlace.mp4},
+	width=\paperwidth,
+	height=\paperheight]{}{VPlayer.swf}%
+};
+\end{tikzpicture}
 \end{frame}
 
 \section*{Wyniki eksperymentów symulacyjnych}
@@ -106,17 +117,22 @@ Litera H – oznaczona w którym pomieszczeniu roboty miały wyższe bazowy wsp�
 
 \end{frame}
 
-\section*{Materiał wideo}
-\begin{frame}
+\section*{Wyniki eksperymentów symulacyjnych -- materiał wideo}
+\begin{frame}[plain]
 \frametitle{\secname}
+\framesubtitle{Wąski korytarz ustawienie 8-3}
 
-Tu powstaje film 1min z eksperymentów symulacyjnych który będzie zawierał:
-
-Otwarta przestrzeń ustawienie 1-2 algorytmy R RVO, PR R+
-Przejście przez drzwi ustawienie 9-H8 algorytmy R PF RVO, PR R+, PF+
-Wąski korytarz ustawienie 8-3 algorytmy R RVO, PR R+
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+	\includemedia[addresource=mov/RobotSimulationNerrowCorridor.mp4,
+	activate=pageopen,
+	transparent,
+	flashvars={source=mov/RobotSimulationNerrowCorridor.mp4},
+	width=\paperwidth,
+	height=\paperheight]{}{VPlayer.swf}%
+};
+\end{tikzpicture}
 \end{frame}
-
 
 \section*{Eksperyment na rzeczywistych robotach}
 \begin{frame}
@@ -186,6 +202,25 @@ Platforma może być dowolnie konfigurowana. Na rysunku widzimy robota CAPO z za
 
 \end{frame}
 
+
+\section*{Wyniki eksperymentów z wykorzystaniem rzeczywistych robotów -- materiał wideo}
+\begin{frame}[plain]
+\frametitle{\secname}
+\framesubtitle{Otwarta przestrzeń ustawienie prostopadłe 1-2}
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+	\includemedia[addresource=mov/RobotRobotOpenSpace.mp4,
+	activate=pageopen,
+	transparent,
+	flashvars={source=mov/RobotRobotOpenSpace.mp4},
+	width=\paperwidth,
+	height=\paperheight]{}{VPlayer.swf}%
+};
+\end{tikzpicture}
+\end{frame}
+
+
 \section*{Wyniki eksperymentów z wykorzystaniem  rzeczywistych robotów}
 \begin{frame}
 \frametitle{\secname}
@@ -211,12 +246,19 @@ Platforma może być dowolnie konfigurowana. Na rysunku widzimy robota CAPO z za
 
 \end{frame}
 
-\section*{Materiał wideo}
-\begin{frame}
+\section*{Wyniki eksperymentów z wykorzystaniem rzeczywistych robotów -- materiał wideo}
+\begin{frame}[plain]
 \frametitle{\secname}
+\framesubtitle{Przejście przez drzwi 1-H2}
 
-Tu powstaje film 1min z eksperymentów na rzeczywistych robotach który będzie zawierał:
-
-Otwarta przestrzeń ustawienie 1-2 algorytmy R RVO, PR R+
-Przejście przez drzwi ustawienie 1-H2 dla algorytmów R, PF, R+ PF+
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+	\includemedia[addresource=mov/RobotRobotPassagePlace.mp4,
+	activate=pageopen,
+	transparent,
+	flashvars={source=mov/RobotRobotPassagePlace.mp4},
+	width=\paperwidth,
+	height=\paperheight]{}{VPlayer.swf}%
+};
+\end{tikzpicture}
 \end{frame}
