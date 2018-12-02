@@ -96,7 +96,7 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 	\item Unikanie konfliktów z ,,większym'' lub ,,silniejszym'' osobnikiem.
 	\item Chęć grupowania.
 	\item Hierarchia społeczna.	
-	\item Poruszanie się w oparciu o zestaw reguł i zasad (np. prawo ruch drogowego).
+	\item Poruszanie się w oparciu o zestaw reguł i zasad (np. prawo ruchu drogowego).
 \end{itemize}
 \end{textblock*}
 
@@ -117,15 +117,15 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 \note{
 	
 \begin{itemize}
-	\item Ludzi czy zwierząt skutecznie koordynują przemieszczanie się bez jawnej komunikacji. 
+	\item Ludzie jak i zwierząt skutecznie koordynują przemieszczanie się bez jawnej komunikacji. 
 	
 	\item Zarówno wśród zwierząt jak i ludzi obserwuje się podświadome unikanie konfliktów z ,,większymi'' lub ,,silniejszymi'' osobnikami. Osobniki czujące się pewniej zakładają, iż ,,mniejsi'' ustąpią im miejsca.
 	
-	\item Również wśród ludzi zaobserwować można skłonność do grupowanie wynikającą z pierwotnych instynktów, ale również przekazywania zdobytej wiedzy następnym pokoleniom.  Młodsze osobniki darzą należnym im, szacunkiem osobniki starsze. 
+	\item Również wśród ludzi zaobserwować można skłonność do grupowanie wynikającą z pierwotnych instynktów, ale również przekazywania zdobytej wiedzy następnym pokoleniom.  Młodsze osobniki darzą należnym im szacunkiem osobniki starsze. 
 	
 	\item Poruszenie się we wspólnej przestrzeni regulowane jest również zestawem reguł, nakazów oraz zakazów jak np. prawo ruchu drogowego.
 	
-	\item Zjawiska te są znacznie bardziej szerokie i właśnie one, dzięki swojej złożoności stonowały inspiracje do stworzenia algorytmów koordynacji ruchu robotów mobilnych.
+	\item Zjawiska te są znacznie bardziej szerokie i właśnie one, dzięki swojej złożoności stanowiły inspiracje do stworzenia algorytmów koordynacji ruchu robotów mobilnych.
 \end{itemize}
 }
 
@@ -172,7 +172,7 @@ Już dziś roboty wyręczają człowieka w wykonywaniu różnorakich zadań taki
 \begin{itemize}
 	\item Stworzenie algorytmów bazujących na zjawisku respektu:  \textit{Respect (R)}, \textit{ Respect+ (R+)}.
 	\item Stworzenie algorytmów bazujących na zasadzie priorytetyzowania wychodzących:  \textit{Passage Factor (PF)}, \textit{Passage Factor+ (PF+)}.
-	\item Stworzenie algorytmów bazujących na zasadzie pierwszeństwa z prawej strony:  \textit{Priority to the Right (PR)}.
+	\item Stworzenie algorytmu bazującego na zasadzie pierwszeństwa z prawej strony:  \textit{Priority to the Right (PR)}.
 	
 	\item Stworzenie modelu formalnego dedykowanego dla danych systemów.	
 	\item Stworzenie środowiska symulacyjnego (wirtualnego).
@@ -269,16 +269,16 @@ Bazując na \textit{zjawisku respektu} stworzono dwie metody, których działani
 	Kolejne kroki algorytmu bazującego na zjawisku respektu to:
 	
 	\begin{itemize}
-		\item  Pobiera lokalizacje uczestników ruchu (linia: 3),
+		\item  Pobranie lokalizacji uczestników ruchu (linia: 3),
 		\item  Wyznaczenie \textit{współczynnik respektu} zgodnie ze wzorem  (linia: 4),
 		\item  Sprawdzenie czy wyznaczone trajektroia nie koliduje z innymi robotami (linie: 5-6),
 		\item  Gdy koliduje wyznaczana jest nowa trajektorii ruchu (linie 8 i 11),
-		\item  Gdy nie koliduje wyznacz najkrtószą trasę do celu.
-		\item  Gdy cel osiągnięty zakończ sobie działanie (linia: 16)
+		\item  Gdy nie koliduje wyznaczana jest najkrtósza trasa do celu (linia 13).
+		\item  Gdy cel osiągnięty zakończ swoje działanie (linia: 16)
 		
 		\item  Algorytm R zakłada, iż roboty o mniejszym \textit{współczynniku respektu} ustąpią pierwszeństwa robotowi o wyższym \textit{współczynniku respektu}. 
 		
-		\item W algorytmie \textit{R+} uwzględnia w wyznaczanieu trajektorii ruchu również roboty o niższym \textit{współczynniku respektu}.
+		\item Zaś algorytm \textit{R+} uwzględnia w wyznaczaniu trajektorii ruchu również roboty o niższym \textit{współczynniku respektu}.
 		
 	\end{itemize}
 }
@@ -576,18 +576,18 @@ Bazując na zintegrowanej zasadzie piorytetyzowanie wychodzących stworzono dwie
 
 \note{
 
-W celu zewryfikowania poprawności działania algorytmów przeprawadzono testy w następująych śrowowiskach i ustawieniach robotów:
+W celu zweryfikowania poprawności działania algorytmów przeprawadzono testy w następująych śrowowiskach i ustawieniach robotów:
 
 \begin{itemize}
 	\item Otwarta przestrzeń -- gdzie roboty stoją naprzeciwko siebie.
 	\item Przejście przez drzwi. -- gdzie roboty muszą pokonać wąskie przejście	
 	\item Wąski korytarz -- gdzie roboty muszą pokoać wąski korytarz.
 	\item Skrzyżowanie równorzędne.
-	\item Skrzyżowanie typu 8 -- gdzie roboty musza wyznaczć pierwszeństwo ruch.
+	\item Skrzyżowanie typu 8 -- gdzie roboty muszą wyznaczć pierwszeństwo ruchu na skrzyżowaniach.
 	\item Mijanka -- gdzie roboty musza wykorzystać mijankę do wzajemego wyminięcia się.	
 \end{itemize}
 
-Zadaniem robot jest przejechanie od punktu startowego do punktu docelowego (oznaczone literą X) omijając inne roboty oraz przeszkody statyczne.
+Zadaniem robota jest przejechanie od punktu startowego do punktu docelowego (oznaczone literą X) omijając inne roboty oraz przeszkody statyczne.
 }
 
 \end{frame}
