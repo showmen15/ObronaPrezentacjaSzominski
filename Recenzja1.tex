@@ -2,8 +2,16 @@
 \begin{frame}
 \frametitle{\secname}
 \framesubtitle{Czy przedstawiony  system wielo-robotowy jest rzeczywiście systemem rozproszonym?}
+\scriptsize
 
-W literaturze znaleźć można różne definicje systemów rozproszonych (ang. distributed system). Tanenbaum w książce ,,Distributed systems: principles and paradigms''  definiują system rozproszony jako \textit{zbiór niezależnych urządzeń technicznych (komputerów) połączonych w jedną spójną logicznie całość}.
+W literaturze znaleźć można różne definicje systemów rozproszonych (ang. distributed system). Autorzy w książce:
+\newline
+
+A. S. Tanenbaum and M. Van Steen. Distributed systems: principles and paradigms.
+Prentice-Hall, 2007
+\newline
+
+definiują system rozproszony jako \textit{zbiór niezależnych urządzeń technicznych (komputerów) połączonych w jedną spójną logicznie całość}.  Komunikacja pomiędzy urządzeniami może być realizowana np. przez sieć komputerową lub magistrale komunikacyjne. Podstawową cechę, która charakteryzuje systemy rozproszone jest jego przejrzystość (ang. transparency) rozumiana poprzez sprawianie wrażania na użytkownikach, iż system stanowi pojedynczy i zintegrowany oraz spójny system.
 
 System rozproszony posiada następujące cechy:
 \begin{itemize}
@@ -14,40 +22,44 @@ System rozproszony posiada następujące cechy:
 	\item skalowalność (ang. scalability),
 	\item tolerowanie awarii (ang. fault tolerance).	
 \end{itemize}
+\end{frame}
 
-\note{
 
-Komunikacja pomiędzy urządzeniami może być realizowana np. przez sieć komputerową lub magistrale komunikacyjne. Podstawową cechę, która charakteryzuje systemy rozproszone jest jego przejrzystość (ang. transparency) rozumiana poprzez sprawianie wrażania na użytkownikach, iż system stanowi pojedynczy i zintegrowany oraz spójny system.
+\section*{1. pytanie prof. Stanisława Ambroszkiewicza}
+\begin{frame}
+\frametitle{\secname}
+\framesubtitle{Czy przedstawiony  system wielo-robotowy jest rzeczywiście systemem rozproszonym?}
+\tiny
 
 Stworzony system wielo-robotowy posiada większość cech systemu rozproszonego. System cechuje współbieżność, gdyż posiada on zdolność do przetwarzania wielu zadań jednocześnie (np. analiza danych o lokalizacji robotów, wyznaczanie trajektorii ruchu). 
-
-Podczas projektowania systemu wielo-robotowego jeden z kluczowych aspektów stanowiła tolerancja na awarię poszczególnych robotów. Stworzone rozwiązanie posiada mechanizmy umożliwiające reakcje (zatrzymania robota) w sytuacji, gdy może dojść do zakleszczenia czy spowodowanego awarią robota lub niemożnością wykonania powierzonego zadania (dojazd do punktu). System ma zagwarantować bezpieczną i skuteczną koordynację ruchu rozumianą ,,jako bezkolizyjne przemieszczanie się robotów'' (rozdział \ref{Section Teza pracy}). Zaś sama skuteczność ,,koordynacji rozumiana jest jako osiągniecie postawionego przed robotami celu (przemieszczenie się od punktu startu do punktu docelowego) oraz nie powodowanie zakleszczeń'' (rozdział \ref{Section Teza pracy}). Tak więc i ta cecha systemu może stanowić przesłankę do stwierdzenia, iż mamy do czynienia z systemem rozproszonym.
-
+\newline
+\newline
+Podczas projektowania systemu wielo-robotowego jeden z kluczowych aspektów stanowiła tolerancja na awarię poszczególnych robotów. Stworzone rozwiązanie posiada mechanizmy umożliwiające reakcje (zatrzymania robota) w sytuacji, gdy może dojść do zakleszczenia czy spowodowanego awarią robota lub niemożnością wykonania powierzonego zadania (dojazd do punktu). System ma zagwarantować bezpieczną i skuteczną koordynację ruchu rozumianą ,,jako bezkolizyjne przemieszczanie się robotów'' (rozdział 3.3). Zaś sama skuteczność ,,koordynacji rozumiana jest jako osiągniecie postawionego przed robotami celu (przemieszczenie się od punktu startu do punktu docelowego) oraz nie powodowanie zakleszczeń'' (rozdział 3.3). Tak więc i ta cecha systemu może stanowić przesłankę do stwierdzenia, iż mamy do czynienia z systemem rozproszonym.
+\newline
+\newline
 Patrząc na stworzony system wielo-robotowy możemy również dostrzec w nim cechę  przezroczystości systemu rozproszonego. Co prawda można zidentyfikować w nim poszczególne składowe, lecz patrząc całościowo na powierzone systemowi wielo-robotowemu zadania (dojazd do wyznaczonych lokalizacji) stworzone rozwiązanie dla obserwatora stanowi jedną spójną,  logiczną całość. 
-
+\newline
+\newline
 Przytoczone cechy systemu rozproszonego zostały spełnione w skonstruowanym systemie wielorobotowym, dlatego zgodnie z moją najlepszą wiedzą można uznać ten system za rozproszony. Uwzględnienie pozostałych cech pozostaje oczywiście potencjalną kwestią dalszych prac.
-}
 \end{frame}
+
+
+
 
 \section*{2. pytanie prof. Stanisława Ambroszkiewicza}
 \begin{frame}
 \frametitle{\secname}
 \framesubtitle{Czy jest on otwarty, tj. czy nowe roboty i nowe powierzchnie do poruszania się dla tych robotów mogą być dodawane lub usuwane dynamicznie, a algorytmy nadal działają poprawnie?}
 
+\tiny
+
 System posiada również cechę otwartości rozumianą jako możliwość rozbudowy systemu pod względem sprzętowym jak i programowym. Rozbudowa pod względem sprzętowym polega na dołączaniu do platformy CAPO nowych modułów poszerzających jego możliwości operacyjne. 
 \newline
 \newline
-Wszystkie stworzone algorytmy są całkowicie bezstanowe, czyli nie są zależne od poprzedniego stanu systemu. Cecha ta umożliwia, po dostarczeniu algorytmowi danych zewnętrznych (informacji o lokalizacji i orientacji robotów), wyznaczenie w dowolnej iteracji sterowania dla poszczególnych robotów. Podobnie rzecz się ma z nowymi powierzchniami, które każdorazowo stanowią dane wejściowe dla algorytmów koordynacji. 
-
-\note{
-
-System posiada również cechę otwartości rozumianą jako możliwość rozbudowy systemu pod względem sprzętowym jak i programowym. Rozbudowa pod względem sprzętowym polega na dołączaniu do platformy CAPO nowych modułów poszerzających jego możliwości operacyjne. 
-
-Aspekt programowy, rozumiany jako umożliwienie dynamicznego dołączania nowych robotów, został uwzględniony na etapie projektowania systemu wielo-robotowego.	Wszystkie stworzone algorytmy są całkowicie bezstanowe, czyli nie są zależne od poprzedniego stanu systemu. Cecha ta umożliwia, po dostarczeniu algorytmowi danych zewnętrznych (informacji o lokalizacji i orientacji robotów), wyznaczenie w dowolnej iteracji sterowania dla poszczególnych robotów. Podobnie rzecz się ma z nowymi powierzchniami, które każdorazowo stanowią dane wejściowe dla algorytmów koordynacji. 
-	
+Aspekt programowy, rozumiany jako umożliwienie dynamicznego dołączania nowych robotów, został uwzględniony na etapie projektowania systemu wielo-robotowego. Wszystkie stworzone algorytmy są całkowicie bezstanowe, czyli nie są zależne od poprzedniego stanu systemu. Cecha ta umożliwia, po dostarczeniu algorytmowi danych zewnętrznych (informacji o lokalizacji i orientacji robotów), wyznaczenie w dowolnej iteracji sterowania dla poszczególnych robotów. Podobnie rzecz się ma z nowymi powierzchniami, które każdorazowo stanowią dane wejściowe dla algorytmów koordynacji. 
+\newline
+\newline
 Reasumując, ze względu na to, iż wszystkie algorytmy są całkowicie bezstanowe mogą działać w środowisku, które zmienia się w sposób całkowicie dynamiczny, czyniąc system otwartym i tym samym spełniając kolejną cechę ważną dla systemów rozproszonych.  
-
-}
 
 \end{frame}
 
@@ -56,6 +68,7 @@ Reasumując, ze względu na to, iż wszystkie algorytmy są całkowicie bezstano
 \begin{frame}
 \frametitle{\secname}
 \framesubtitle{Jak jest faktyczna autonomia i niezależność robotów?}
+\scriptsize
 
 Autonomia robotów (rozważana w kontekście sterownia i zarządzania grupą robotów mobilnych) umożliwia robotom niezależne wyznaczanie bezkolizyjnej trajektorii ruchu bez konieczności uzgadniania działań z innymi uczestnikami ruchu. Zadanie to jest realizowane w sposób całkowicie autonomiczny przez samego robota.  W oparciu o dane wejściowe (lokalizacji wraz z orientacją), robot podejmuje decyzję o wyborze trajektorii wyznaczonej w oparciu o jeden z algorytmów koordynacji.
 
@@ -66,21 +79,17 @@ Autonomia robotów (rozważana w kontekście sterownia i zarządzania grupą rob
 \begin{frame}
 \frametitle{\secname}
 \framesubtitle{\tiny{W eksperymentach roboty komunikują się z centralnym serwerem. A więc nie są one autonomiczne.  Czy nie prościej byłoby dodać prosty protokół komunikacyjny pomiędzy robotami, które siebie widzą, zachowując w ten sposób autonomiczność robotów?}}
+\tiny
 
 Robot otrzymuje jedynie informacje o lokalizacji  oraz orientacji swojej oraz innych robotów z serwera lokalizacji. Procedura jest całkowicie niezależna od decyzji i operacji  wykonywanych przez roboty. Wszystkie roboty nasłuchują informacji wysyłanych z~serwera lokalizacji. Cały proces nie wymaga od nich zestawienia połączenia między sobą i jest niezależny od pozostałych działań poszczególnych uczestników ruchu. 
 \newline
 \newline
-Wykorzystanie protokołu komunikacyjnego (nawet prostego) pomiędzy uczestnikami ruchu obarczone jest wieloma ograniczeniami oraz podatne jest na awaryjność. ,,Przy dużej ilości robotów, ograniczona przepustowość kanału komunikacyjnego może doprowadzić do spowolnienia lub zatrzymania pracy całego systemu'', lecz stanowi alternatywną wersję wzajemnego postrzegania się robotów.
-
-
-\note{
-Robot otrzymuje jedynie informacje o lokalizacji  oraz orientacji swojej oraz innych robotów z serwera lokalizacji. Procedura jest całkowicie niezależna od decyzji i operacji  wykonywanych przez roboty. Wszystkie roboty nasłuchują informacji wysyłanych z~serwera lokalizacji. Cały proces nie wymaga od nich zestawienia połączenia między sobą i jest niezależny od pozostałych działań poszczególnych uczestników ruchu. 
-
 Bez znajomości lokalizacji poszczególnych robotów tworzony algorytm nie byłby w stanie funkcjonować. Problem wyznaczenia lokalizacji poszczególnych robotów jest koniecznym i złożonym procesem samym w sobie. Jednak niniejsza praca nie stanowi próby stworzenia nowego lub udoskonalenia już istniejącego sposobu lokalizacji robotów. Informacje o lokalizacji powinny być traktowane jedynie jako element techniczny systemu, innymi słowy: dane wejściowe dla algorytmów a nie element samych algorytmów.
-
-Wykorzystanie protokołu komunikacyjnego (nawet prostego) pomiędzy uczestnikami ruchu obarczone jest wieloma ograniczeniami oraz podatne jest na awaryjność. ,,Przy dużej ilości robotów, ograniczona przepustowość kanału komunikacyjnego może doprowadzić do spowolnienia lub zatrzymania pracy całego systemu'' \cite{silver2005cooperative} rozdział \ref{Przegląd istniejących algorytmów koordynacji ruchu robotów mobilnych}, lecz stanowi alternatywną wersję wzajemnego postrzegania się robotów. Oprócz wykorzystania protokołu komunikacyjnego w celu wzajemnej identyfikacji oraz omijania robotów, konieczna jest jeszcze globalna lokalizacja robota na mapie, aby możliwe było wyznaczenie trajektorii robota do celu. Znajomość ,,globalnej'' lokalizacji umożliwia robotowi, w sposób całkowicie autonomiczny, wyznaczenie trajektorii ruchu w kierunku punktu docelowego. 
-
+\newline
+\newline
+Wykorzystanie protokołu komunikacyjnego (nawet prostego) pomiędzy uczestnikami ruchu obarczone jest wieloma ograniczeniami oraz podatne jest na awaryjność. ,,Przy dużej ilości robotów, ograniczona przepustowość kanału komunikacyjnego może doprowadzić do spowolnienia lub zatrzymania pracy całego systemu'' [84] rozdział 2.3, lecz stanowi alternatywną wersję wzajemnego postrzegania się robotów. Oprócz wykorzystania protokołu komunikacyjnego w celu wzajemnej identyfikacji oraz omijania robotów, konieczna jest jeszcze globalna lokalizacja robota na mapie, aby możliwe było wyznaczenie trajektorii robota do celu. Znajomość ,,globalnej'' lokalizacji umożliwia robotowi, w sposób całkowicie autonomiczny, wyznaczenie trajektorii ruchu w kierunku punktu docelowego. 
+\newline
+\newline
 Innymi słowy, wprowadzenie protokołu komunikacyjnego tylko w celu ustalenia pozycji byłoby również elementem technicznym, komplikującym system natomiast nie wpływającym na działanie samych algorytmów.
-}
 
 \end{frame}
